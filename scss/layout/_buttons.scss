@@ -1,0 +1,38 @@
+// Styling for X icon in Alert Box, courtesy of http://cssicon.space/#/icon/close
+
+.remove.icon {
+  color: #FFF;
+  position: absolute;
+  margin-left: 3px;
+  margin-top: 10px;
+  top: 12px;
+  right: 30px;
+
+  @media (min-width: 48em) {
+    position: static;
+    margin-right: 10px;
+    top: 0;
+    right: 0;
+  }
+
+}
+
+.remove.icon:before {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 2px;
+  background-color: currentColor;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.remove.icon:after {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 2px;
+  background-color: currentColor;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
