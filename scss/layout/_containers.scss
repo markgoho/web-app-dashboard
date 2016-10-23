@@ -3,26 +3,46 @@ header {
 }
 
 .wrapper {
-	//display: flex;
+	// @media (min-width: 30em) {
+	// 	display: flex;
+	// }
 }
 
 nav {
 	background-color: $nav-color;
-	border: 1px solid white;
-	
-	
+	// border: 1px solid white;
+
+
+
+	@media (min-width: 30em) {
+		width: 100px;
+		float: left;
+		height: 100vh;
+	}
+
+
 	ul {
 		width: 100%;
 		border: 1px solid yellow;
+		//height: 75px;
 		display: flex;
+
+
+		@media (min-width: 30em) {
+			flex-direction: column;
+		}
 
 		li {
 			border: 1px solid green;
-			margin: 0 1em;
+			padding: 0 15px;
+			//margin: 0 5%;
+
+			@media (min-width: 30em) {
+				margin: 10px 0;
+			}
 
 			svg {
 				width: 100%;
-				padding: 1em;
 				margin: 0 auto;
 			}
 		}
@@ -37,4 +57,8 @@ main {
 
 #dashboard-header {
 	width: 100%;
+}
+
+#dashboard > div {
+	flex-grow: 1;
 }
