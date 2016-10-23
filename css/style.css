@@ -1,12 +1,13 @@
 html {
   box-sizing: border-box; }
 
-body {
+*, *:before, *:after {
+  box-sizing: inherit;
   margin: 0;
   padding: 0; }
 
-*, *:before, *:after {
-  box-sizing: inherit; }
+li {
+  list-style: none; }
 
 .border {
   border: 1px solid #4D4B72; }
@@ -19,17 +20,30 @@ body {
 header {
   background-color: #7477BF; }
 
-.wrapper {
-  display: flex; }
-
 nav {
   background-color: #4D4B72;
-  float: left;
-  flex-basis: 55px; }
+  border: 1px solid white; }
+  nav ul {
+    width: 100%;
+    border: 1px solid yellow;
+    display: flex; }
+    nav ul li {
+      border: 1px solid green;
+      margin: 0 1em; }
+      nav ul li svg {
+        width: 100%;
+        padding: 1em;
+        margin: 0 auto; }
 
 main {
   position: relative;
   display: flex;
   flex-wrap: wrap; }
+
+#dashboard-header {
+  width: 100%; }
+
+.white-fill {
+  fill: #FFF; }
 
 /*# sourceMappingURL=style.css.map */
