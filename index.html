@@ -2,187 +2,200 @@
 <html lang="en">
   <head>
       <meta charset="utf-8">
-      <link href="css/styles.css" rel="stylesheet" type="text/css" />
+      <link href="css/style.css" rel="stylesheet" type="text/css" />
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
       <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
       <title>Web App Dashboard</title>
   </head>
   <body>
-  	<header role="banner">
+  	<header class="flex" role="banner">
   		<h1>YourAppTM</h1>
   		<ul>
   			<li></li>
   			<li><span id="user-avatar"></span>Mark Goho</li>
   		</ul>
   	</header>
-  	<nav role="navigation">
-  		<ul>
-  			<li>DashSVG</li>
-  			<li>MembersSVG</li>
-  			<li>VisitsSVG</li>
-  			<li>SettingsSVG</li>
-  		</ul>
-  	</nav>
+  	<div class="wrapper">
+	  	<nav role="navigation">
+	  		<ul>
+	  			<li>DashSVG</li>
+	  			<li>MembersSVG</li>
+	  			<li>VisitsSVG</li>
+	  			<li>SettingsSVG</li>
+	  		</ul>
+	  	</nav>
 
-  	<main id="dashboard" role="main">
+	  	<main id="dashboard" role="main">
 
-  		<div id="search">
-  			<input type="text" id="search-box" name="search-box" placeholder="Search">
-  		</div>
+	  		<div id="search">
+	  			<input type="search" id="search-box" name="search-box" placeholder="Search">
+	  		</div>
 
-  		<h1 class="page-title">Dashboard</h1>
+	  		<h1 class="page-title">Dashboard</h1>
 
-  		<div class="alert-box">
-  			<h3>Alert</h3>
-  			<span>Nullam quis risus eget urna mollis ornare veleu leo. Nullam id dolor id nibh ultricies vehicula ut id elit. Curabitur blandit tempus portiror.</span>
-  			<span>XSVG</span>
-  		</div>
+	  		<div class="alert-box">
+	  			<h3>Alert</h3>
+	  			<span>Nullam quis risus eget urna mollis ornare veleu leo. Nullam id dolor id nibh ultricies vehicula ut id elit. Curabitur blandit tempus portiror.</span>
+	  			<span>XSVG</span>
+	  		</div>
 
-  		<div id="traffic">
-  			<div id="traffic-header">
-  				<h2>Traffic</h2>
-  				<ul>
-  					<li>Hourly</li>
-  					<li>Daily</li>
-  					<li class="active">Weekly</li>
-  					<li>Monthly</li>
-  				</ul>
-  			<canvas id="traffic-chart" width="800" height="400"></canvas>
-  		</div>
+	  		<div class="border" id="traffic">
+	  			<div id="traffic-header">
+	  				<h2>Traffic</h2>
+	  				<ul>
+	  					<li>Hourly</li>
+	  					<li>Daily</li>
+	  					<li class="active">Weekly</li>
+	  					<li>Monthly</li>
+	  				</ul>
+	  			<canvas id="traffic-chart" width="800" height="400"></canvas>
+	  		</div>
 
-  		<div id="daily-traffic">
-  			<h2>Daily Traffic</h2>
-  			<canvas id="daily-traffic-chart" width="400" height="300"></canvas>
-  		</div>
+	  		<div class="border" id="daily-traffic">
+	  			<h2>Daily Traffic</h2>
+	  			<canvas id="daily-traffic-chart" width="400" height="300"></canvas>
+	  		</div>
 
-  		<div id="mobile-users">
-  			<h2>Mobile Users</h2>
-  			<canvas id="mobile-users-chart" width="400" height="300"></canvas>
-  		</div>
+	  		<div class="border" id="mobile-users">
+	  			<h2>Mobile Users</h2>
+	  			<canvas id="mobile-users-chart" width="400" height="300"></canvas>
+	  		</div>
 
-  		<div id="social-stats">
-  			<h2>Social Stats</h2>
-  			<ul id="social-stats">
-	  			<li>SVG Twitter 10,345</li>
-	  			<li>SVG Facebook 8,739</li>
-	  			<li>SVG Google+ 2,530</li>
-	  			<li>SVG LinkedIn 4,593</li>
-	  			<li>SVG Reddit 3,351</li>
-  			</ul>
-  		</div>
+	  		<div class="border" id="social-stats">
+	  			<h2>Social Stats</h2>
+	  			<ul id="social-stats">
+		  			<li>SVG Twitter 10,345</li>
+		  			<li>SVG Facebook 8,739</li>
+		  			<li>SVG Google+ 2,530</li>
+		  			<li>SVG LinkedIn 4,593</li>
+		  			<li>SVG Reddit 3,351</li>
+	  			</ul>
+	  		</div>
 
-  		<div id="new-members">
-  			<ul>
-  				<li>
-		  			<img clas="user-avatar" src="img/vchambers.jpg" alt="user avatar victoria chambers">
-		  			<div>
-		  				<h3>Victoria Chambers</h3>
-		  				<a href="mailto:victoria.chambers80@example.com">victoria.chambers80@example.com</a>
-		  			</div>
-		  			<span>10/15/15</span>
-		  		</li>
-		  	</ul>
-		  	<ul>
-  				<li>
-		  			<img clas="user-avatar" src="img/dbyrd.jpg" alt="user avatar dale byrd">
-		  			<div>
-		  				<h3>Dale Byrd</h3>
-		  				<a href="mailto:dale.byrd52@example.com">dale.byrd52@example.com</a>
-		  			</div>
-		  			<span>10/15/15</span>
-		  		</li>
-		  	</ul>
-		  	<ul>
-  				<li>
-		  			<img clas="user-avatar" src="img/dwood.jpg" alt="user avatar dawn wood">
-		  			<div>
-		  				<h3>Dawn Wood</h3>
-		  				<a href="mailto:dawn.wood16@example.com">dawn.wood16@example.com</a>
-		  			</div>
-		  			<span>10/15/15</span>
-		  		</li>
-		  	</ul>
-		  	<ul>
-  				<li>
-		  			<img clas="user-avatar" src="img/doliver.jpg" alt="user avatar dan oliver"> 
-		  			<div>
-		  				<h3>Dan Oliver</h3>
-		  				<a href="mailto:dan.oliver82@example.com">dan.oliver82@example.com</a>
-		  			</div>
-		  			<span>10/15/15</span>
-		  		</li>
-		  	</ul>
-  		</div>
+	  		<div class="border" id="new-members">
+	  			<ul>
+	  				<li>
+			  			<img clas="user-avatar" src="img/vchambers.jpg" alt="user avatar victoria chambers">
+			  			<div>
+			  				<h3>Victoria Chambers</h3>
+			  				<a href="mailto:victoria.chambers80@example.com">victoria.chambers80@example.com</a>
+			  			</div>
+			  			<span>10/15/15</span>
+			  		</li>
+			  	</ul>
+			  	<ul>
+	  				<li>
+			  			<img clas="user-avatar" src="img/dbyrd.jpg" alt="user avatar dale byrd">
+			  			<div>
+			  				<h3>Dale Byrd</h3>
+			  				<a href="mailto:dale.byrd52@example.com">dale.byrd52@example.com</a>
+			  			</div>
+			  			<span>10/15/15</span>
+			  		</li>
+			  	</ul>
+			  	<ul>
+	  				<li>
+			  			<img clas="user-avatar" src="img/dwood.jpg" alt="user avatar dawn wood">
+			  			<div>
+			  				<h3>Dawn Wood</h3>
+			  				<a href="mailto:dawn.wood16@example.com">dawn.wood16@example.com</a>
+			  			</div>
+			  			<span>10/15/15</span>
+			  		</li>
+			  	</ul>
+			  	<ul>
+	  				<li>
+			  			<img clas="user-avatar" src="img/doliver.jpg" alt="user avatar dan oliver"> 
+			  			<div>
+			  				<h3>Dan Oliver</h3>
+			  				<a href="mailto:dan.oliver82@example.com">dan.oliver82@example.com</a>
+			  			</div>
+			  			<span>10/15/15</span>
+			  		</li>
+			  	</ul>
+	  		</div>
 
-  		<div id="recent-activity">
-  			<ul>
-  				<li>
-		  			<img clas="user-avatar" src="img/vchambers.jpg" alt="user avatar victoria chambers">
-		  			<div>
-		  				<h3>Victoria Chambers commented on YourApp's SEO Tips</h3>
-		  				<span>4 hours ago</span>
-		  			</div>
-		  			SVG Arrow
-		  		</li>
-		  	</ul>
-		  	<ul>
-  				<li>
-		  			<img clas="user-avatar" src="img/dbyrd.jpg" alt="user avatar dale byrd">
-		  			<div>
-		  				<h3>Dale Byrd liked the post Facebook's Changes for 2016</h3>
-		  				<span>5 hours ago</span>
-		  			</div>
-		  			SVG Arrow
-		  		</li>
-		  	</ul>
-		  	<ul>
-  				<li>
-		  			<img clas="user-avatar" src="img/dwood.jpg" alt="user avatar dawn wood">
-		  			<div>
-		  				<h3>Dawn Wood commented on Facebook's Changes for 2016</h3>
-		  				<span>5 hours ago</span>
-		  			</div>
-		  			SVG Arrow
-		  		</li>
-		  	</ul>
-		  	<ul>
-  				<li>
-		  			<img clas="user-avatar" src="img/doliver.jpg" alt="user avatar dan oliver"> 
-		  			<div>
-		  				<h3>Dan Oliver posted YourApp's SEO Tips</h3>
-		  				<span>1 day ago</span>
-		  			</div>
-		  			SVG Arrow
-		  		</li>
-		  	</ul>
-  		</div>
+	  		<div class="border" id="recent-activity">
+	  			<ul>
+	  				<li>
+			  			<img clas="user-avatar" src="img/vchambers.jpg" alt="user avatar victoria chambers">
+			  			<div>
+			  				<h3>Victoria Chambers commented on YourApp's SEO Tips</h3>
+			  				<span>4 hours ago</span>
+			  			</div>
+			  			SVG Arrow
+			  		</li>
+			  	</ul>
+			  	<ul>
+	  				<li>
+			  			<img clas="user-avatar" src="img/dbyrd.jpg" alt="user avatar dale byrd">
+			  			<div>
+			  				<h3>Dale Byrd liked the post Facebook's Changes for 2016</h3>
+			  				<span>5 hours ago</span>
+			  			</div>
+			  			SVG Arrow
+			  		</li>
+			  	</ul>
+			  	<ul>
+	  				<li>
+			  			<img clas="user-avatar" src="img/dwood.jpg" alt="user avatar dawn wood">
+			  			<div>
+			  				<h3>Dawn Wood commented on Facebook's Changes for 2016</h3>
+			  				<span>5 hours ago</span>
+			  			</div>
+			  			SVG Arrow
+			  		</li>
+			  	</ul>
+			  	<ul>
+	  				<li>
+			  			<img clas="user-avatar" src="img/doliver.jpg" alt="user avatar dan oliver"> 
+			  			<div>
+			  				<h3>Dan Oliver posted YourApp's SEO Tips</h3>
+			  				<span>1 day ago</span>
+			  			</div>
+			  			SVG Arrow
+			  		</li>
+			  	</ul>
+	  		</div>
 
-  		<div id="message-user">
-  			<input type="text" id="user-search" name="user-search" placeholder="Search for User">
-  			<textarea id="message" name="message" placeholder="Message for User"></textarea>
-  		</div>
+	  		<div class="border" id="message-user">
+	  			<form action="/" method="post">
+		  			<input type="text" id="user-search" name="user-search" placeholder="Search for User">
+		  			<textarea id="message" name="message" placeholder="Message for User"></textarea>
+		  			<button type="submit">Send</button>
+	  			</form>
+	  		</div>
 
-  		<div id="settings">
-  			<h2>Settings</h2>
-  			<div>
-            	Send Email Notifications
-          	</div>
-			<div class="switch">
-				<input id="email-notifications" class="toggle-button" type="checkbox">
-				<label for="email-notifications"></label>
-			</div>
-			<div>
-				Set Profile to Public
-			</div>
-			<div class="switch">
-				<input id="public-profile" class="toggle-button" type="checkbox">
-				<label for="public-profile"></label>
-			</div>
-  		</div>
+	  		<div class="border" id="settings">
+	  			<h2>Settings</h2>
+	  			<div>
+	            	Send Email Notifications
+	          	</div>
+				<div class="switch">
+					<input id="email-notifications" class="toggle-button" type="checkbox">
+					<label for="email-notifications"></label>
+				</div>
+				<div>
+					Set Profile to Public
+				</div>
+				<div class="switch">
+					<input id="public-profile" class="toggle-button" type="checkbox">
+					<label for="public-profile"></label>
+				</div>
+				<select id="time-zone">
+					<option>Pacific Time Zone</option>
+					<option>Mountain Time Zone</option>
+					<option>Central Time Zone</option>
+					<option>Eastern Time Zone</option>
+				</select>
+				<button class="button">Save</button>
+				<button class="button cancel">Cancel</button>
+	  		</div>
 
-  		<footer role="contentinfo"></footer>
+	  		<footer role="contentinfo"></footer>
 
-  	</main>
+	  	</main>
+	</div>
   	<script
 	  src="https://code.jquery.com/jquery-3.1.1.min.js"
 	  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="

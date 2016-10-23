@@ -1,0 +1,20 @@
+header {
+	background-color: $header-color;
+}
+
+.wrapper {
+	display: flex;
+}
+
+nav {
+	background-color: $nav-color;
+	float: left;
+	flex-basis: 55px;
+}
+
+main {
+	position: relative;
+	// flex-grow: 1;
+	display: flex;
+	flex-wrap: wrap;
+}

@@ -1,7 +1,35 @@
 html {
   box-sizing: border-box; }
 
+body {
+  margin: 0;
+  padding: 0; }
+
 *, *:before, *:after {
   box-sizing: inherit; }
+
+.border {
+  border: 1px solid #4D4B72; }
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+
+header {
+  background-color: #7477BF; }
+
+.wrapper {
+  display: flex; }
+
+nav {
+  background-color: #4D4B72;
+  float: left;
+  flex-basis: 55px; }
+
+main {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap; }
 
 /*# sourceMappingURL=style.css.map */
