@@ -86,6 +86,15 @@ nav {
 		display: flex;
 		flex-wrap: wrap;
 	}
+
+	div h2 {
+		font-size: 1.15em;
+		text-transform: uppercase;
+	}
+
+	div h3 {
+		font-size: 0.9em;
+	}
 }
 
 #dashboard > div {
@@ -168,6 +177,29 @@ nav {
 
 #traffic {
 	min-width: 100%;
+
+	#traffic-header {
+		@media (min-width: 48em) {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		#traffic-timeline {
+			display: flex;
+
+			div {
+				margin-left: 0.5em;
+				padding: 5px;
+			}
+		}	
+	}
+
+.active {
+	background-color: $highlight-color;
+	border-radius: 7px;
+}
+
 }
 
 #social-stats {
@@ -183,4 +215,10 @@ nav {
 	margin: 0 0.25em;
 	display: inline;
 	float: left;
+}
+
+.canvas-container {
+	width: 100%;
+	//max-height: 300px;
+	display: inline-block;
 }

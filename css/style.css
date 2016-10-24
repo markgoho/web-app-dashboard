@@ -84,6 +84,11 @@ nav {
     #dashboard {
       display: flex;
       flex-wrap: wrap; } }
+  #dashboard div h2 {
+    font-size: 1.15em;
+    text-transform: uppercase; }
+  #dashboard div h3 {
+    font-size: 0.9em; }
 
 #dashboard > div {
   padding: 1em; }
@@ -148,6 +153,19 @@ nav {
 
 #traffic {
   min-width: 100%; }
+  @media (min-width: 48em) {
+    #traffic #traffic-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; } }
+  #traffic #traffic-header #traffic-timeline {
+    display: flex; }
+    #traffic #traffic-header #traffic-timeline div {
+      margin-left: 0.5em;
+      padding: 5px; }
+  #traffic .active {
+    background-color: #81C98F;
+    border-radius: 7px; }
 
 #social-stats {
   min-width: 100%; }
@@ -161,17 +179,20 @@ nav {
   display: inline;
   float: left; }
 
+.canvas-container {
+  width: 100%;
+  display: inline-block; }
+
 .remove.icon {
   color: #FFF;
   position: absolute;
   margin-left: 3px;
   margin-top: 10px;
   top: 12px;
-  right: 30px; }
+  right: 0; }
   @media (min-width: 48em) {
     .remove.icon {
       position: static;
-      margin-right: 10px;
       top: 0;
       right: 0; } }
 
@@ -195,6 +216,17 @@ nav {
 
 #notification-bell {
   width: 30px; }
+
+.ct-series-a .ct-line {
+  stroke: #7377BF;
+  stroke-width: 0.3vw; }
+
+.ct-series-a .ct-area {
+  fill: #7377BF; }
+
+.ct-series-a .ct-point {
+  stroke: #7377BF;
+  stroke-width: 1.25vw; }
 
 .white-fill {
   fill: #FFF;

@@ -6,11 +6,11 @@
   margin-left: 3px;
   margin-top: 10px;
   top: 12px;
-  right: 30px;
+  right: 0;
 
   @media (min-width: 48em) {
     position: static;
-    margin-right: 10px;
+    //margin-right: 10px;
     top: 0;
     right: 0;
   }
