@@ -67,7 +67,9 @@ var mobileUsers = {
 };
 
 var pieOptions = {
-	donut: true
+	donut: true,
+	startAngle: 90,
+	showLabel: false
 };
 
-new Chartist.Pie("#mobile-users-chart", mobileUsers, pieOptions);
+var pieChart = new Chartist.Pie("#mobile-users-chart", mobileUsers, pieOptions);

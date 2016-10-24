@@ -11,3 +11,31 @@
 	stroke: $primary-color;
 	stroke-width: 1.25vw;
 }
+
+.ct-series-a .ct-bar {
+	stroke: $primary-color;
+	stroke-width: 4vw;
+	@media (min-width: 48em) {
+		stroke-width: 2vw;
+	}
+}
+
+.ct-series-a .ct-slice-donut {
+	stroke: $primary-color;
+}
+
+.ct-series-b .ct-slice-donut {
+	stroke: $highlight-color;
+}
+
+.ct-series-c .ct-slice-donut {
+	stroke: #74B1BF;
+}
+
+#mobile-users {
+	
+}
+
+#mobile-users-chart {
+	border: 1px solid red;
+}
