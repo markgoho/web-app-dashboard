@@ -181,13 +181,38 @@ nav {
   display: inline;
   float: left; }
 
-.canvas-container {
-  width: 100%;
-  display: inline-block; }
+#mobile-users {
+  display: flex;
+  flex-wrap: wrap; }
+  #mobile-users h2 {
+    flex-basis: 100%; }
 
 #mobile-container {
-  width: 50%;
-  margin: 0; }
+  flex-basis: 50%; }
+
+#mobile-label {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; }
+  #mobile-label div {
+    flex-grow: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 4.5em; }
+  #mobile-label div:before {
+    position: absolute;
+    content: '';
+    height: 25px;
+    width: 25px;
+    border-radius: 5px;
+    left: -40px; }
+  #mobile-label div:nth-child(1):before {
+    background-color: #74B1BF; }
+  #mobile-label div:nth-child(2):before {
+    background-color: #81C98F; }
+  #mobile-label div:nth-child(3):before {
+    background-color: #7377BF; }
 
 .remove.icon {
   color: #FFF;
