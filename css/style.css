@@ -308,6 +308,32 @@ nav {
 .ct-series-c .ct-slice-donut {
   stroke: #74B1BF; }
 
+.social-block {
+  display: flex;
+  border: 1px solid #7377BF;
+  border-radius: 10px;
+  align-content: center;
+  padding: 3vw; }
+
+.brand-logo {
+  flex-basis: 30%;
+  background-color: #7377BF;
+  padding: 15px;
+  border-radius: 50%; }
+
+.social-stats {
+  padding-left: 1em;
+  flex-grow: 1;
+  font-family: 'Open Sans', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .social-stats h3, .social-stats div {
+    padding: 0;
+    margin: 0; }
+  .social-stats div {
+    font-size: 3em; }
+
 .white-fill {
   fill: #FFF;
   opacity: 0.6; }
