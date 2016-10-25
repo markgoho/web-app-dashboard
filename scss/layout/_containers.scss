@@ -202,16 +202,12 @@ nav {
 		}	
 	}
 
-.active {
-	transition: all 0.3s;
-	background-color: $highlight-color;
-	border-radius: 7px;
-}
+	.active {
+		transition: all 0.3s;
+		background-color: $highlight-color;
+		border-radius: 7px;
+	}
 
-}
-
-#social-stats {
-	min-width: 100%;
 }
 
 .avatar {

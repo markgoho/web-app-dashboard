@@ -24,6 +24,13 @@ div, p, span, ul, li, a {
   font-family: Rubik, Arial, sans-serif;
   font-weight: 300; }
 
+.white-fill {
+  fill: #FFF;
+  opacity: 0.6; }
+
+.opaque {
+  opacity: 1; }
+
 header {
   background-color: #7477BF;
   padding: 1em;
@@ -169,9 +176,6 @@ nav {
     background-color: #81C98F;
     border-radius: 7px; }
 
-#social-stats {
-  min-width: 100%; }
-
 .avatar {
   border-radius: 50%; }
 
@@ -308,6 +312,10 @@ nav {
 .ct-series-c .ct-slice-donut {
   stroke: #74B1BF; }
 
+#social-stats {
+  display: flex;
+  width: 100%; }
+
 .social-block {
   display: flex;
   border: 1px solid #7377BF;
@@ -316,10 +324,12 @@ nav {
   padding: 3vw; }
 
 .brand-logo {
+  display: flex;
   flex-basis: 30%;
   background-color: #7377BF;
   padding: 15px;
-  border-radius: 50%; }
+  border-radius: 50%;
+  height: 100%; }
 
 .social-stats {
   padding-left: 1em;
@@ -331,14 +341,10 @@ nav {
   .social-stats h3, .social-stats div {
     padding: 0;
     margin: 0; }
+  .social-stats h3 {
+    font-weight: 400;
+    color: #7377BF; }
   .social-stats div {
     font-size: 3em; }
-
-.white-fill {
-  fill: #FFF;
-  opacity: 0.6; }
-
-.opaque {
-  opacity: 1; }
 
 /*# sourceMappingURL=style.css.map */
