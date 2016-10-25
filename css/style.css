@@ -162,8 +162,10 @@ nav {
     display: flex; }
     #traffic #traffic-header #traffic-timeline div {
       margin-left: 0.5em;
-      padding: 5px; }
+      padding: 5px;
+      cursor: pointer; }
   #traffic .active {
+    transition: all 0.3s;
     background-color: #81C98F;
     border-radius: 7px; }
 
@@ -220,6 +222,39 @@ nav {
 
 #notification-bell {
   width: 30px; }
+
+.chartist-tooltip {
+  position: absolute;
+  display: inline-block;
+  opacity: 0;
+  min-width: 5em;
+  padding: .5em;
+  background: #F4C63D;
+  color: #453D3F;
+  font-family: Oxygen,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  text-align: center;
+  pointer-events: none;
+  z-index: 1;
+  -webkit-transition: opacity .2s linear;
+  -moz-transition: opacity .2s linear;
+  -o-transition: opacity .2s linear;
+  transition: opacity .2s linear; }
+  .chartist-tooltip:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    margin-left: -15px;
+    border: 15px solid transparent;
+    border-top-color: #F4C63D; }
+  .chartist-tooltip.tooltip-show {
+    opacity: 1; }
+
+.ct-area, .ct-line {
+  pointer-events: none; }
 
 .ct-series-a .ct-line {
   stroke: #7377BF;

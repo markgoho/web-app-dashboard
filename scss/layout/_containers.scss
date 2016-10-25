@@ -188,14 +188,22 @@ nav {
 		#traffic-timeline {
 			display: flex;
 
+
 			div {
+				//transition: all 0.1s ease-out;
 				margin-left: 0.5em;
 				padding: 5px;
+				cursor: pointer;
 			}
+
+			// div:hover {
+			// 	background-color: $highlight-color;
+			// }
 		}	
 	}
 
 .active {
+	transition: all 0.3s;
 	background-color: $highlight-color;
 	border-radius: 7px;
 }
