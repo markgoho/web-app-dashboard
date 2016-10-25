@@ -183,6 +183,10 @@ nav {
   width: 100%;
   display: inline-block; }
 
+#mobile-container {
+  width: 50%;
+  margin: 0; }
+
 .remove.icon {
   color: #FFF;
   position: absolute;
@@ -243,9 +247,6 @@ nav {
 
 .ct-series-c .ct-slice-donut {
   stroke: #74B1BF; }
-
-#mobile-users-chart {
-  border: 1px solid red; }
 
 .white-fill {
   fill: #FFF;
