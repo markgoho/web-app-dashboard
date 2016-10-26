@@ -334,7 +334,12 @@ nav {
     background-image: url(../img/icon-google-plus.svg);
     background-size: 30px; }
   .social-block #linkedin-logo {
-    background-image: url(../img/icon-linkedin.svg); }
+    background-image: url(../img/icon-linkedin.svg);
+    background-size: 30px; }
+  .social-block #reddit-logo {
+    background-image: url(../img/icon-reddit.svg); }
+  .social-block #youtube-logo {
+    background-image: url(../img/icon-youtube.svg); }
 
 .brand-logo {
   background-color: #7377BF;
