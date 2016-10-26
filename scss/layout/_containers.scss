@@ -10,7 +10,30 @@ header {
 	#notifications {
 		float: left;
 		border-right: 2px solid rgba(255, 255, 255, 0.5);
-		padding-right: 0.5em;
+		padding-right: 0.75em;
+		position: relative;
+
+		#notification-box {
+			display: none;
+			padding: 0.5em;
+			color: $highlight-color;
+			position: absolute;
+			background-color: white;
+			width: 300px;
+			border: 2px solid $highlight-color;
+			top: 3em;
+			right: -4em;
+			z-index: 1000;
+
+			ul li {
+				padding: 0.5em;
+			}
+
+			@media (min-width: 30em) {
+				top: 3em;
+				right: 0;
+			}
+		}
 	}
 
 	#user {		
@@ -22,6 +45,11 @@ header {
 		//width: 100px;
 		float: right;
 		margin: 0.4em 0 0 0.5em;
+		display: none;
+
+		@media (min-width: 30em) {
+			display: block;
+		}
 	}
 }
 
@@ -127,13 +155,13 @@ nav {
 	color: #FFF;
 
 	@media (min-width: 48em) {
-		position: static;
+		// position: static;
 		display: flex;
 		max-width: 100%;
 	}
 
 	h3, span {
-		padding-right: 0.5em;
+		padding-right: 1.5em;
 	}
 
 }

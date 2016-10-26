@@ -3,18 +3,13 @@
 .remove.icon {
   color: #FFF;
   position: absolute;
+  height: 30px;
+  width: 30px;
   margin-left: 3px;
   margin-top: 10px;
-  top: 12px;
+  top: 0;
   right: 0;
-
-  @media (min-width: 48em) {
-    position: static;
-    //margin-right: 10px;
-    top: 0;
-    right: 0;
-  }
-
+  cursor: pointer;
 }
 
 .remove.icon:before {
@@ -22,6 +17,8 @@
   position: absolute;
   width: 15px;
   height: 2px;
+  top: 15px;
+  left: 5px;
   background-color: currentColor;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
@@ -32,11 +29,29 @@
   position: absolute;
   width: 15px;
   height: 2px;
+  top: 15px;
+  left: 5px;
   background-color: currentColor;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
 
-#notification-bell {
+// -------------------------------------------------------------------------------
+.notification-bell {
+  background: url(../img/icon-bell.svg) no-repeat center center;
+  background-size: 25px;
   width: 30px;
+  height: 30px;
+  padding-right: 30px;
+  cursor: pointer;
+}
+
+#new-notification {
+  position: absolute;
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+  background-color: $highlight-color;
+  top: 0;
+  right: 5px;
 }

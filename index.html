@@ -13,8 +13,21 @@
   		<h1>Your<span>App&trade;</span></h1>
   		<div id="user-bar">
   			<div id="notifications">
-  				<img src="img/icon-bell.svg" class="icon" alt="notification bell">
-  				<div class="new-notification"></div>
+  				<div class="notification-bell"></div>
+  				<div id="new-notification"></div>
+  				<div id="notification-box">
+  					<ul>
+  						<li>
+  							Security alert! Change your password now.
+  						</li>
+  						<li>
+  							You have 5 new friend requests.
+  						</li>
+  						<li>
+  							Do you like YourApp? Leave us a review now.
+  						</li>
+  					</ul>
+  				</div>
   			</div>
   			<div id="user">
   				<img src="img/mgoho-avatar.jpg" class="avatar icon" alt="mark goho avatar" type="image/jpg">
@@ -98,7 +111,7 @@
 		  		<div class="alert-box">
 		  			<h3>Alert</h3>
 		  			<span>Nullam quis risus eget urna mollis ornare veleu leo. Nullam id dolor id nibh ultricies vehicula ut id elit. Curabitur blandit tempus portiror.</span>
-		  			<div class="remove icon"></div>
+		  			<div id="close-alert" class="remove icon"></div>
 		  		</div>
 		  	</div>
 

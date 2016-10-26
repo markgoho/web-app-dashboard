@@ -264,3 +264,27 @@ var pieOptions = {
 };
 
 var pieChart = new Chartist.Pie("#mobile-users-chart", mobileUsers, pieOptions);
+
+// Alert box close
+
+var $closeAlert = $('#close-alert'); // X icon
+
+$closeAlert.click(function () { // when clicked
+  $(this).parent().hide(); // hide alert box (parent)
+});
+
+
+// New Notification popup
+
+var $newNotification = $('.notification-bell');
+var $notificationDot = $('#new-notification');
+var $notificationBox = $('#notification-box');
+
+$newNotification.click(function () {
+  $notificationDot.hide();
+  $notificationBox.show();
+});
+
+$notificationBox.click(function () {
+  $notificationBox.hide();
+});
