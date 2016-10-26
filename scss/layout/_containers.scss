@@ -39,6 +39,18 @@ header {
 	#user {		
 		float: left;
 		margin-left: 0.5em;
+
+		.mgoho {
+			border-radius: 50%;
+		    width: 35px;
+		    height: 35px;
+		    background-repeat: no-repeat;
+		    background-position: center;
+		    background-size: 35px;
+		    float: left;
+		    background-size: 50px;
+			background-image: url(../img/mgoho-avatar.jpg);
+		}
 	}
 
 	.user-name {
@@ -242,12 +254,7 @@ nav {
 	border-radius: 50%;
 }
 
-.icon {
-	width: 2em;
-	margin: 0 0.25em;
-	display: inline;
-	float: left;
-}
+
 
 #mobile-users {
 	display: flex;
@@ -312,9 +319,9 @@ nav {
 	border-radius: 10px;
 	border: 1px solid $primary-color;
 
-	* {
-		border: 1px solid red;
-	}
+	// * {
+	// 	border: 1px solid red;
+	// }
 
 	a {
 		font-size: 0.75em;
@@ -326,6 +333,10 @@ nav {
 	flex-direction: column;
 	justify-content: center;
 	padding-left: 1em;
+
+	span {
+		font-size: 0.75em;
+	}
 }
 
 .profile-img {
@@ -337,6 +348,7 @@ nav {
 	    background-size: 35px;
 	    float: left;
 	    background-size: 50px;
+	    margin-right: 0.5em;
 	}
 
 .vchambers {
@@ -356,9 +368,99 @@ nav {
 }
 
 #recent-activity {
+
+	& > div {
+		position: relative;
+	}
 	.name-email {
 		padding: 0;
 		flex-basis: 85%;
 		justify-content: center;
 	}
+}
+
+#message-user {
+	form {
+		// display: flex;
+		// flex-direction: column;
+
+		input, textarea, button {
+			display: block;
+			width: 100%;
+			border: 1px solid $primary-color;
+			background-color: #EEE;
+			margin-top: 1em;
+			border-radius: 5px;
+			font-size: 1.25em;
+		}
+
+		input, textarea {
+			padding: 1em;
+
+		}
+
+		input {
+			height: 30px;
+
+		}
+
+		input:focus, textarea:focus {
+			border-color: $highlight-color;
+			background-color: #FFF;
+		}
+
+		textarea {
+			height: 150px;
+		}
+
+		button {
+			font-size: 0.75em;
+			border: none;
+			text-transform: uppercase;
+			background-color: $primary-color;
+			color: #FFF;
+			height: 50px;
+			margin-top: 1em;
+		}
+	}
+}
+
+
+
+#settings {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+
+	
+	#save-cancel-buttons {
+		display: flex;
+		justify-content: space-between;
+
+		button {
+			//flex-grow: 1;
+			border: none;
+			text-transform: uppercase;
+			background-color: $primary-color;
+			color: #FFF;
+			height: 50px;
+			margin-top: 1em;
+			border-radius: 5px;
+			min-width: 48%;
+			font-size: 0.75em;
+			
+		}
+		.cancel {
+				background-color: #DDD;
+				
+			}
+	}
+
+}
+
+
+
+footer {
+	flex-basis: 51%;
 }

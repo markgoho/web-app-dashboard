@@ -41,12 +41,14 @@
 // Arrow right icon from cssicon.space
 
 .arrow-right.icon {
-  color: #000;
+  color: $primary-color;
   position: absolute;
   margin-left: 2px;
   margin-top: 10px;
   width: 16px;
   height: 1px;
+  bottom: 10px;
+  right: 5px;
   background-color: currentColor;
 }
 
@@ -62,6 +64,8 @@
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
+
+// ------------------------------------------------------------------------------
 
 .notification-bell {
   background: url(../img/icon-bell.svg) no-repeat center center;
@@ -80,4 +84,123 @@
   background-color: $highlight-color;
   top: 0;
   right: 5px;
+}
+
+.toggle-switch {
+  width: 75%;
+  padding: 5px;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+}
+
+// CSS Toggle Switch ------------------------------
+
+.cmn-toggle {
+  position: absolute;
+  margin-left: -9999px;
+  visibility: hidden;
+}
+.cmn-toggle + label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+input.cmn-toggle-round-flat + label {
+  padding: 2px;
+  width: 80px;
+  height: 30px;
+  background-color: #dddddd;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  -ms-border-radius: 60px;
+  -o-border-radius: 60px;
+  border-radius: 60px;
+  -webkit-transition: background 0.4s;
+  -moz-transition: background 0.4s;
+  -o-transition: background 0.4s;
+  transition: background 0.4s;
+}
+input.cmn-toggle-round-flat + label:before,
+input.cmn-toggle-round-flat + label:after {
+  display: block;
+  position: absolute;
+  content: "";
+}
+
+input.cmn-toggle-round-flat + label:before {
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+  right: 2px;
+  background-color: $primary-color;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  -ms-border-radius: 60px;
+  -o-border-radius: 60px;
+  border-radius: 60px;
+  -webkit-transition: background 0.4s;
+  -moz-transition: background 0.4s;
+  -o-transition: background 0.4s;
+  transition: background 0.4s;
+  z-index: 1;
+
+}
+input.cmn-toggle-round-flat + label:after {
+  top: 4px;
+  left: 4px;
+  bottom: 4px;
+  width: 22px;
+  background-color: #DDD;
+  -webkit-border-radius: 52px;
+  -moz-border-radius: 52px;
+  -ms-border-radius: 52px;
+  -o-border-radius: 52px;
+  border-radius: 52px;
+  -webkit-transition: margin 0.4s, background 0.4s;
+  -moz-transition: margin 0.4s, background 0.4s;
+  -o-transition: margin 0.4s, background 0.4s;
+  transition: margin 0.4s, background 0.4s;
+  z-index: 3;
+
+}
+input.cmn-toggle-round-flat:checked + label {
+  background-color: #DDD;
+}
+input.cmn-toggle-round-flat:checked + label:after {
+  margin-left: 50px;
+  background-color: #FFF;
+  border: 2px solid #DDD;
+  z-index: 3;
+
+}
+
+.switch {
+  position: relative;
+}
+
+.switch:before, .switch:after {
+  position:absolute;
+  top: 10px;
+  z-index: 2;
+  font-size: 0.5em;
+  color: white;
+  font-weight: 400;
+
+}
+
+.switch:before {
+  content: "ON";
+  left: 10px;  
+}
+
+.switch:after {
+  content: "OFF";
+  left: 55px;  
 }

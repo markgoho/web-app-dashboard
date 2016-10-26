@@ -30,7 +30,7 @@
   				</div>
   			</div>
   			<div id="user">
-  				<img src="img/mgoho-avatar.jpg" class="avatar icon" alt="mark goho avatar" type="image/jpg">
+  				<div class="mgoho" type="image/jpg"></div>
   				<div class="user-name">Mark Goho</div>
   			</div>
   		</div>
@@ -280,6 +280,7 @@
 	  		</div>
 
 	  		<div class="border" id="message-user">
+	  			<h2>Message User</h2>
 	  			<form action="/" method="post">
 		  			<input type="text" id="user-search" name="user-search" placeholder="Search for User">
 		  			<textarea id="message" name="message" placeholder="Message for User"></textarea>
@@ -289,19 +290,19 @@
 
 	  		<div class="border" id="settings">
 	  			<h2>Settings</h2>
-	  			<div>
-	            	Send Email Notifications
-	          	</div>
-				<div class="switch">
-					<input id="email-notifications" class="toggle-button" type="checkbox">
-					<label for="email-notifications"></label>
+	  			<div class="toggle-switch">
+		  			<div>Send Email Notifications</div>
+					<div class="switch">
+						<input id="email-notifications" class="cmn-toggle cmn-toggle-round-flat" type="checkbox">
+						<label for="email-notifications"></label>
+					</div>
 				</div>
-				<div>
-					Set Profile to Public
-				</div>
-				<div class="switch">
-					<input id="public-profile" class="toggle-button" type="checkbox">
-					<label for="public-profile"></label>
+				<div class="toggle-switch">
+					<div>Set Profile to Public</div>
+					<div class="switch">
+						<input id="public-profile" class="cmn-toggle cmn-toggle-round-flat" type="checkbox">
+						<label for="public-profile"></label>
+					</div>
 				</div>
 				<select id="time-zone">
 					<option>Pacific Time Zone</option>
@@ -309,8 +310,10 @@
 					<option>Central Time Zone</option>
 					<option>Eastern Time Zone</option>
 				</select>
-				<button class="button">Save</button>
-				<button class="button cancel">Cancel</button>
+				<div id="save-cancel-buttons">
+					<button>Save</button>
+					<button class="cancel">Cancel</button>
+				</div>
 	  		</div>
 
 	  		<footer role="contentinfo">
