@@ -333,6 +333,8 @@ nav {
   .social-block #google-plus-logo {
     background-image: url(../img/icon-google-plus.svg);
     background-size: 30px; }
+  .social-block #linkedin-logo {
+    background-image: url(../img/icon-linkedin.svg); }
 
 .brand-logo {
   background-color: #7377BF;
