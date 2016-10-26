@@ -31,6 +31,10 @@ div, p, span, ul, li, a {
 .opaque {
   opacity: 1; }
 
+.flex-align-center {
+  display: flex;
+  align-content: center; }
+
 header {
   background-color: #7477BF;
   padding: 1em;
@@ -239,6 +243,56 @@ nav {
   #mobile-label div:nth-child(3):before {
     background-color: #7377BF; }
 
+#new-members > div,
+#recent-activity > div {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  margin-top: 1em;
+  background-color: #EEE;
+  padding: 0.5em;
+  border-radius: 10px;
+  border: 1px solid #7377BF; }
+  #new-members > div *,
+  #recent-activity > div * {
+    border: 1px solid red; }
+  #new-members > div a,
+  #recent-activity > div a {
+    font-size: 0.75em; }
+
+.name-email {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 1em; }
+
+.profile-img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 35px;
+  float: left;
+  background-size: 50px; }
+
+.vchambers {
+  background-image: url(../img/vchambers.jpg); }
+
+.dbyrd {
+  background-image: url(../img/dbyrd.jpg); }
+
+.dwood {
+  background-image: url(../img/dwood.jpg); }
+
+.doliver {
+  background-image: url(../img/doliver.jpg); }
+
+#recent-activity .name-email {
+  padding: 0;
+  flex-basis: 85%;
+  justify-content: center; }
+
 .remove.icon {
   color: #FFF;
   position: absolute;
@@ -271,6 +325,27 @@ nav {
   background-color: currentColor;
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg); }
+
+.arrow-right.icon {
+  color: #000;
+  position: absolute;
+  margin-left: 2px;
+  margin-top: 10px;
+  width: 16px;
+  height: 1px;
+  background-color: currentColor; }
+
+.arrow-right.icon:before {
+  content: '';
+  position: absolute;
+  right: 1px;
+  top: -5px;
+  width: 10px;
+  height: 10px;
+  border-top: solid 1px currentColor;
+  border-right: solid 1px currentColor;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg); }
 
 .notification-bell {
   background: url(../img/icon-bell.svg) no-repeat center center;
@@ -352,16 +427,55 @@ nav {
 #social-stats {
   display: flex;
   min-width: 100%;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  justify-content: center; }
   #social-stats h2 {
     width: 100%; }
 
+.brand-logo {
+  background-color: #7377BF;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 35px;
+  margin: 0 auto; }
+  @media (min-width: 48em) {
+    .brand-logo {
+      margin: 0;
+      float: left; } }
+
 .social-block {
-  border: 1px solid #7377BF;
+  border: 2px solid #7377BF;
+  background-color: #EEE;
   border-radius: 10px;
   align-content: center;
-  padding: 1vw;
-  flex-grow: 1; }
+  padding: 1em;
+  flex-basis: 45%;
+  margin: 0.5em; }
+  @media (min-width: 48em) {
+    .social-block {
+      display: flex;
+      align-items: center;
+      flex-basis: 200px; } }
+  .social-block .social-stats {
+    flex-grow: 1;
+    flex-direction: column;
+    font-family: 'Open Sans', Arial, sans-serif;
+    display: flex;
+    margin-top: 0.5em; }
+    @media (min-width: 48em) {
+      .social-block .social-stats {
+        display: block;
+        margin: 0 0 0 1em; } }
+    .social-block .social-stats h3 {
+      font-weight: 400;
+      color: #7377BF;
+      margin: 0 auto; }
+    .social-block .social-stats div {
+      font-size: 2em;
+      margin: 0 auto; }
   .social-block #twitter-logo {
     background-image: url(../img/icon-twitter.svg); }
   .social-block #facebook-logo {
@@ -377,28 +491,5 @@ nav {
     background-image: url(../img/icon-reddit.svg); }
   .social-block #youtube-logo {
     background-image: url(../img/icon-youtube.svg); }
-
-.brand-logo {
-  background-color: #7377BF;
-  padding: 15px;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 35px; }
-
-.social-stats {
-  padding-left: 1em;
-  flex-grow: 1;
-  font-family: 'Open Sans', Arial, sans-serif; }
-  .social-stats h3, .social-stats div {
-    padding: 0;
-    margin: 0; }
-  .social-stats h3 {
-    font-weight: 400;
-    color: #7377BF; }
-  .social-stats div {
-    font-size: 3em; }
 
 /*# sourceMappingURL=style.css.map */

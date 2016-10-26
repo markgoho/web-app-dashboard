@@ -300,3 +300,65 @@ nav {
 	
 
 }
+
+#new-members > div,
+#recent-activity > div {
+	display: flex;
+	justify-content: space-between;
+	align-content: center;
+	margin-top: 1em;
+	background-color: #EEE;
+	padding: 0.5em;
+	border-radius: 10px;
+	border: 1px solid $primary-color;
+
+	* {
+		border: 1px solid red;
+	}
+
+	a {
+		font-size: 0.75em;
+	}
+}
+
+.name-email {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-left: 1em;
+}
+
+.profile-img {
+		border-radius: 50%;
+	    width: 50px;
+	    height: 50px;
+	    background-repeat: no-repeat;
+	    background-position: center;
+	    background-size: 35px;
+	    float: left;
+	    background-size: 50px;
+	}
+
+.vchambers {
+	background-image: url(../img/vchambers.jpg);
+}
+
+.dbyrd {
+	background-image: url(../img/dbyrd.jpg);
+}
+
+.dwood {
+	background-image: url(../img/dwood.jpg);
+}
+
+.doliver {
+	background-image: url(../img/doliver.jpg);
+}
+
+#recent-activity {
+	.name-email {
+		padding: 0;
+		flex-basis: 85%;
+		justify-content: center;
+	}
+}

@@ -39,3 +39,8 @@ div, p, span, ul, li, a {
 .opaque {
 	opacity: 1;
 }
+
+.flex-align-center {
+	display: flex;
+	align-content: center;
+}
