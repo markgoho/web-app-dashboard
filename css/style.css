@@ -314,30 +314,40 @@ nav {
 
 #social-stats {
   display: flex;
-  width: 100%; }
+  min-width: 100%;
+  flex-wrap: wrap; }
+  #social-stats h2 {
+    width: 100%; }
 
 .social-block {
-  display: flex;
   border: 1px solid #7377BF;
   border-radius: 10px;
   align-content: center;
-  padding: 3vw; }
+  padding: 1vw;
+  flex-grow: 1; }
+  .social-block #twitter-logo {
+    background-image: url(../img/icon-twitter.svg); }
+  .social-block #facebook-logo {
+    background-image: url(../img/icon-facebook.svg);
+    background-size: 15px; }
+  .social-block #google-plus-logo {
+    background-image: url(../img/icon-google-plus.svg);
+    background-size: 30px; }
 
 .brand-logo {
-  display: flex;
-  flex-basis: 30%;
   background-color: #7377BF;
   padding: 15px;
   border-radius: 50%;
-  height: 100%; }
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 35px; }
 
 .social-stats {
   padding-left: 1em;
   flex-grow: 1;
-  font-family: 'Open Sans', Arial, sans-serif;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; }
+  font-family: 'Open Sans', Arial, sans-serif; }
   .social-stats h3, .social-stats div {
     padding: 0;
     margin: 0; }
