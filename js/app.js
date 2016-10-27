@@ -294,12 +294,12 @@ $notificationBox.click(function () {
   $notificationBox.hide();
 });
 
-// Autocomplete for users
+// Autocomplete for users -----------------------------
 
 var $userList = $('#new-members .name-email h3');
 var $searchBox = $('#user-search');
 var $resultBox = $('#autocomplete-box');
-var $resultName = $('#autocomplete-box ul li');
+
 
 $searchBox.keyup(function () {
   var $searchString = $(this).val().toLowerCase(); //convert the input box's value to lowercase
@@ -309,19 +309,22 @@ $searchBox.keyup(function () {
   $userList.each(function() { // for each H3 in the list
     var $innerText = $(this).text(); //assign the inner text to a variable
 
-    if ($searchString === "") {
-      $matchedList.html("");
+    if ($searchString === "") { // if the search string is empty
+      $matchedList.html(""); // make the ul empty as well
     } else {
-      if ($innerText.toLowerCase().search($searchString) != -1) {
-        $matchedList.append('<li>' + $innerText + '</li>');
+      if ($innerText.toLowerCase().search($searchString) != -1) { // if the search string is found
+        $matchedList.append('<li>' + $innerText + '</li>'); //add that as a list itme to the list
       }
     }
 
   });
+
+  var $resultName = $('#autocomplete-box ul li'); //after the list items have been made, convert to a JQ object
+  $resultName.click(function() { // if a user clicks on a list item
+    $searchBox.val($(this).text()); // assign that to the value in the search box
+    $resultBox.hide(); // close the results box
+  });
+
 });
 
-$resultName.click(function() {
-  console.log($(this).text() + " has been clicked!");
-  // $searchBox.val = $(this).text();
-  // $resultBox.hide();
-});
+// ----------------------------------------------------
