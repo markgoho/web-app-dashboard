@@ -244,17 +244,22 @@ $trafficBtn.click(function () {
 var dailyTraffic = {
 	labels: ["S", "M", "T", "W", "T", "F", "S"],
 	series: [
-	[75, 100, 175, 125, 225, 200, 100]
+    [75, 100, 175, 125, 225, 200, 100],
+    [50, 125, 175, 120, 300, 150, 75]
 	]
 };
 
-var barChart = new Chartist.Bar('#daily-traffic-chart', dailyTraffic);
+var barChartOptions = {
+  //seriesBarDistance: 30
+};
+
+var barChart = new Chartist.Bar('#daily-traffic-chart', dailyTraffic, barChartOptions);
 
 // Mobile Users Chart
 
 var mobileUsers = {
-	labels: ["Phones", "Tablets", "Desktop"],
-	series: [70, 18, 12]
+	labels: ["Phones", "Tablets", "Desktop", "Smartwatches"],
+	series: [70, 18, 12, 25]
 };
 
 var pieOptions = {
@@ -287,4 +292,36 @@ $newNotification.click(function () {
 
 $notificationBox.click(function () {
   $notificationBox.hide();
+});
+
+// Autocomplete for users
+
+var $userList = $('#new-members .name-email h3');
+var $searchBox = $('#user-search');
+var $resultBox = $('#autocomplete-box');
+var $resultName = $('#autocomplete-box ul li');
+
+$searchBox.keyup(function () {
+  var $searchString = $(this).val().toLowerCase(); //convert the input box's value to lowercase
+  var $matchedList = $resultBox.children();
+  $resultBox.show(); // show the resultsbox as user types
+
+  $userList.each(function() { // for each H3 in the list
+    var $innerText = $(this).text(); //assign the inner text to a variable
+
+    if ($searchString === "") {
+      $matchedList.html("");
+    } else {
+      if ($innerText.toLowerCase().search($searchString) != -1) {
+        $matchedList.append('<li>' + $innerText + '</li>');
+      }
+    }
+
+  });
+});
+
+$resultName.click(function() {
+  console.log($(this).text() + " has been clicked!");
+  // $searchBox.val = $(this).text();
+  // $resultBox.hide();
 });

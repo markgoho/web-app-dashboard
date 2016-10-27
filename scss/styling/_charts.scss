@@ -1,4 +1,4 @@
-// Chartist plugin: tooltips
+ // Chartist plugin: tooltips
 
 $chart-tooltip-bg: #F4C63D;
 $chart-tooltip-color: #453D3F;
@@ -55,13 +55,19 @@ $chart-tooltip-color: #453D3F;
 	stroke-width: 1.25vw;
 }
 
-.ct-series-a .ct-bar {
-	stroke: $primary-color;
-	stroke-width: 4vw;
-	@media (min-width: 48em) {
-		stroke-width: 2vw;
-	}
+.ct-series-a .ct-bar,
+.ct-series-b .ct-bar {	
+  stroke-width: 10px;
 }
+
+.ct-series-a .ct-bar {
+  stroke: $primary-color;
+}
+
+.ct-series-b .ct-bar {
+  stroke: $highlight-color;
+}
+
 
 .ct-series-a .ct-slice-donut {
 	stroke: $primary-color;
@@ -73,12 +79,4 @@ $chart-tooltip-color: #453D3F;
 
 .ct-series-c .ct-slice-donut {
 	stroke: #74B1BF;
-}
-
-#mobile-users {
-
-}
-
-#mobile-users-chart {
-	//border: 1px solid red;
 }
