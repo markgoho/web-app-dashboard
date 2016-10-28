@@ -444,6 +444,15 @@ nav {
 			padding: 1em;
 			//top: 5px;
 
+			ul li {
+				cursor: pointer;
+			}
+
+			ul li:hover {
+				background-color: $highlight-color;
+				color: white;
+			}
+
 		}
 	}
 }

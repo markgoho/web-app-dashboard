@@ -323,8 +323,47 @@ $searchBox.keyup(function () {
   $resultName.click(function() { // if a user clicks on a list item
     $searchBox.val($(this).text()); // assign that to the value in the search box
     $resultBox.hide(); // close the results box
+    $matchedList.html("");
   });
 
 });
 
 // ----------------------------------------------------
+
+// Save settings in Local storage
+
+var $emailNotification = $('#email-notifications');
+var $publicProfile = $('#public-profile');
+var $timeZone = $('#time-zone');
+
+// check to see what localStorage has for values, then set checkbox accordingly
+
+if (localStorage.email === "true") {
+  $emailNotification[0].checked = true;
+} else {
+  $emailNotification[0].checked = false;
+}
+
+if (localStorage.profile === "true") {
+  $publicProfile[0].checked = true;
+} else {
+  $publicProfile[0].checked = false;
+}
+
+$timeZone.val(localStorage.timeZone);
+
+
+// Put checked state into storage
+$emailNotification.click(function () {
+  localStorage.setItem('email', $emailNotification[0].checked);
+  console.log("Email checked status now: " + $emailNotification[0].checked);
+});
+
+$publicProfile.click(function () {
+  localStorage.setItem('profile', $publicProfile[0].checked);
+  console.log("Profile checked status now: " + $publicProfile[0].checked);
+});
+
+$timeZone.click(function () {
+  localStorage.setItem('timeZone', $timeZone.val());
+});
