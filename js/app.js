@@ -304,6 +304,7 @@ var $resultBox = $('#autocomplete-box');
 $searchBox.keyup(function () {
   var $searchString = $(this).val().toLowerCase(); //convert the input box's value to lowercase
   var $matchedList = $resultBox.children();
+  $matchedList.html(""); //clear the list each time so the append function doesn't stack up
   $resultBox.show(); // show the resultsbox as user types
 
   $userList.each(function() { // for each H3 in the list
