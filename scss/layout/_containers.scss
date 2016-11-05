@@ -215,6 +215,7 @@ nav {
 	}
 }
 
+
 #traffic {
 	min-width: 100%;
 
@@ -389,6 +390,7 @@ nav {
 }
 
 #message-user {
+	position: relative;
 	form {
 
 		position: relative;
@@ -455,6 +457,19 @@ nav {
 
 		}
 	}
+}
+
+.message-sent,
+.message-error {
+	display: none;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	background-color: rgba(255, 255, 255, 0.85);
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
 }
 
 

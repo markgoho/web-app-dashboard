@@ -330,6 +330,46 @@ $searchBox.keyup(function () {
 
 // ----------------------------------------------------
 
+
+
+// Send message to user -------------------------------
+
+var $sendMessage = $('.message-send');
+var $message = $('#message');
+var $messageSent = $('.message-sent');
+var $messageError = $('.message-error');
+
+function checkInput () {
+  if (!$(this).val()) {
+    $(this).css('background-color', '#D46A6A');
+  } else {
+    $(this).css('background-color', '#81C98F');
+  }
+}
+
+$searchBox.blur(checkInput); // when the box loses focus, check input
+$message.blur(checkInput);
+
+$sendMessage.click(function(event) {
+  event.preventDefault(); // prevent the form from sending
+  if (!$searchBox.val()) {
+    $searchBox.css('background-color', '#D46A6A');
+  }
+
+  if (!$message.val()) {
+    $message.css('background-color', '#D46A6A');
+  }
+
+  if (!$message.val() || !$searchBox.val()) {
+    $messageError.css('display', 'flex').fadeOut(5000);
+  } else {
+    $searchBox.val("").attr('style',''); // clear inputs and reset css to original value
+    $message.val("").attr('style','');
+    $messageSent.css('display', 'flex').fadeOut(5000); // display the success message, then fade out over 5 seconds  
+  }
+  
+});
+
 // Save settings in Local storage
 
 var $emailNotification = $('#email-notifications');

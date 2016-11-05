@@ -301,48 +301,62 @@ nav {
   flex-basis: 85%;
   justify-content: center; }
 
-#message-user form {
+#message-user {
   position: relative; }
-  #message-user form input, #message-user form textarea, #message-user form button {
-    display: block;
-    width: 100%;
-    border: 1px solid #7377BF;
-    background-color: #EEE;
-    margin-top: 1em;
-    border-radius: 5px;
-    font-size: 1.25em; }
-  #message-user form input, #message-user form textarea {
-    padding: 1em; }
-  #message-user form input {
-    height: 30px; }
-  #message-user form input:focus, #message-user form textarea:focus {
-    border-color: #81C98F;
-    background-color: #FFF; }
-  #message-user form textarea {
-    height: 150px; }
-  #message-user form button {
-    font-size: 0.75em;
-    border: none;
-    text-transform: uppercase;
-    background-color: #7377BF;
-    color: #FFF;
-    height: 50px;
-    margin-top: 1em; }
-  #message-user form #autocomplete-box {
-    display: none;
-    position: absolute;
-    height: auto;
-    border-radius: 5px;
-    width: 75%;
-    border: 2px solid #81C98F;
-    margin-top: 5px;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 1em; }
-    #message-user form #autocomplete-box ul li {
-      cursor: pointer; }
-    #message-user form #autocomplete-box ul li:hover {
-      background-color: #81C98F;
-      color: white; }
+  #message-user form {
+    position: relative; }
+    #message-user form input, #message-user form textarea, #message-user form button {
+      display: block;
+      width: 100%;
+      border: 1px solid #7377BF;
+      background-color: #EEE;
+      margin-top: 1em;
+      border-radius: 5px;
+      font-size: 1.25em; }
+    #message-user form input, #message-user form textarea {
+      padding: 1em; }
+    #message-user form input {
+      height: 30px; }
+    #message-user form input:focus, #message-user form textarea:focus {
+      border-color: #81C98F;
+      background-color: #FFF; }
+    #message-user form textarea {
+      height: 150px; }
+    #message-user form button {
+      font-size: 0.75em;
+      border: none;
+      text-transform: uppercase;
+      background-color: #7377BF;
+      color: #FFF;
+      height: 50px;
+      margin-top: 1em; }
+    #message-user form #autocomplete-box {
+      display: none;
+      position: absolute;
+      height: auto;
+      border-radius: 5px;
+      width: 75%;
+      border: 2px solid #81C98F;
+      margin-top: 5px;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 1em; }
+      #message-user form #autocomplete-box ul li {
+        cursor: pointer; }
+      #message-user form #autocomplete-box ul li:hover {
+        background-color: #81C98F;
+        color: white; }
+
+.message-sent,
+.message-error {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.85);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0; }
 
 #settings {
   display: flex;
