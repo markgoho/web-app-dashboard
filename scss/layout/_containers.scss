@@ -338,6 +338,10 @@ nav {
 	}
 }
 
+.activity-desc {
+	max-width: 80%;
+}
+
 .name-email {
 	display: flex;
 	flex-direction: column;
@@ -387,6 +391,31 @@ nav {
 		flex-basis: 85%;
 		justify-content: center;
 	}
+}
+
+.activity-type {
+	position: absolute;
+	height: 2em;
+	width: 2em;
+	top: 0;
+	right: 0;
+	border-left: 1px solid $primary-color;
+	border-bottom: 1px solid $primary-color;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 24px;
+}
+
+.comment {
+	background-image: url(../img/comment.svg);
+}
+
+.like {
+	background-image: url(../img/thumb-up.svg);
+}
+
+.signup {
+	background-image: url(../img/check.svg);
 }
 
 #message-user {
